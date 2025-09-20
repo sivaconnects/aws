@@ -37,9 +37,9 @@ Amazon Q, as an AI, doesn’t directly access your AWS account. Instead, the MCP
 6. **Verify the Amazon Q installation:**  
    Bash  
    q \--version
-![alt text](003.png)
+   <img width="1324" height="323" alt="003" src="https://github.com/user-attachments/assets/6f4c5142-062c-4af9-a9fe-3beb03084286" />
 
-7. Amazon Q Login with your Builder ID:  
+8. Amazon Q Login with your Builder ID:  
    If you already have a Builder ID, great\! If not, create one. It’s different from your AWS user ID and takes about 5 minutes from this URL:  
    https://us-east-1.signin.aws/platform/login?workflowStateHandle=738d74a3-3406-4c13-bb36-a7daa36af48c  
    Then, log in to Amazon Q:  
@@ -50,17 +50,17 @@ Amazon Q, as an AI, doesn’t directly access your AWS account. Instead, the MCP
    Once you give your credentials, you’ll receive a verification code on your email. Enter that verification code, confirm, and allow access.  
    Now, return to our EC2 instance. You will see "device authorized and logged in successfully."  
 
-   ![alt text](002.png)
+   <img width="1325" height="192" alt="002" src="https://github.com/user-attachments/assets/be44aee2-3952-448e-8442-67fc0a40e394" />
 
-8. **Press q to launch Amazon Q CLI:**  
+9. **Press q to launch Amazon Q CLI:**  
    Bash  
    q
-![alt text](004.png)
+   <img width="1325" height="590" alt="004" src="https://github.com/user-attachments/assets/e524b3d2-09b9-41e9-8fb2-b529801e6452" />
 
-9. **Now, quit from Q CLI** so we can move forward with the rest of the process:  
+11. **Now, quit from Q CLI** so we can move forward with the rest of the process:  
    Bash  
    /quit
-![alt text](005.png)
+   <img width="1327" height="192" alt="005" src="https://github.com/user-attachments/assets/88d0f12e-90cf-461e-85e3-8fb34af2f313" />
 
 ---
 
@@ -79,17 +79,17 @@ Amazon Q, as an AI, doesn’t directly access your AWS account. Instead, the MCP
    Then, check the Snap version again:  
    Bash  
    snap version
-![alt text](011.png)
+   <img width="1325" height="154" alt="011" src="https://github.com/user-attachments/assets/d38d1b04-a604-4229-beb8-efa13cf4749a" />
 
-2. **Now, install AWS CLI** using the command below:  
+3. **Now, install AWS CLI** using the command below:  
    Bash  
    sudo snap install aws-cli \--classic
 
-3. **Verify the AWS CLI:**  
+4. **Verify the AWS CLI:**  
    Bash  
    aws \--version
 
-4. **Create an IAM user with Administrative privileges.** Then, create an Access Key for the user.  
+5. **Create an IAM user with Administrative privileges.** Then, create an Access Key for the user.  
    Go to IAM \> Users \> Create User.  
    * Select: "Provide user access to the AWS Management Console."  
    * Select: "I want to create an IAM user."  
@@ -105,7 +105,7 @@ Amazon Q, as an AI, doesn’t directly access your AWS account. Instead, the MCP
    * Give a tag to your access key (any name).  
    * Create Access Key.  
      \> Copy the Access Key & Secret Access Key into a notepad and move to your EC2 instance, where we need to configure AWS CLI.  
-5. **Configure the AWS CLI login credentials:**  
+6. **Configure the AWS CLI login credentials:**  
    Bash  
    aws configure
 
@@ -120,7 +120,7 @@ Amazon Q, as an AI, doesn’t directly access your AWS account. Instead, the MCP
    ubuntu@ip-172-31-28-248:\~$ aws \--version  
    aws-cli/2.30.6 Python/3.13.7 Linux/6.14.0-1011-aws exe/x86\_64.ubuntu.24  
    ubuntu@ip-172-31-28-248:\~$
-   ![alt text](012.png)
+   <img width="1331" height="151" alt="012" src="https://github.com/user-attachments/assets/9924f07a-674b-4b22-8991-9e354a7de7ad" />
 
 ---
 
@@ -142,8 +142,8 @@ This section will cover how to set up an MCP server that lets Amazon Q access AW
    Bash  
    sudo add-apt-repository ppa:deadsnakes/ppa \-y
 
-   *What's happening?* This adds the Deadsnakes PPA to your system's list of repositories. deadsnakes/ppa is a well-known PPA that provides newer versions of Python than what’s officially in Ubuntu’s default repositories. Ubuntu’s default repositories often have older Python versions (sometimes outdated). The Deadsnakes PPA is maintained by trusted Ubuntu community developers and includes the latest & multiple Python versions (e.g., Python 3.8, 3.9, 3.10, 3.11, etc.), so you can install whichever version you need.  
-   ![alt text](006.png)
+   *What's happening?* This adds the Deadsnakes PPA to your system's list of repositories. deadsnakes/ppa is a well-known PPA that    provides newer versions of Python than what’s officially in Ubuntu’s default repositories. Ubuntu’s default repositories often have older Python versions (sometimes outdated). The Deadsnakes PPA is maintained by trusted Ubuntu community developers and includes the latest & multiple Python versions (e.g., Python 3.8, 3.9, 3.10, 3.11, etc.), so you can install whichever version you need.  
+   <img width="1332" height="518" alt="006" src="https://github.com/user-attachments/assets/d8c1bc7d-46c4-46be-bfac-bdc6831642e4" />
 
 4. **Now, install Python 3.10:**  
    Bash  
@@ -171,7 +171,7 @@ This section will cover how to set up an MCP server that lets Amazon Q access AW
 9. **Activate the Virtual environment** – this lets you enter into the virtual environment:  
    Bash  
    source \~/aws-mcp-env/bin/activate
-   ![alt text](007.png)
+   <img width="1318" height="138" alt="007" src="https://github.com/user-attachments/assets/84a1bf09-8d99-4c2c-a2ae-28f3fd10a23e" />
 
 ---
 
@@ -234,8 +234,8 @@ This section will cover how to set up an MCP server that lets Amazon Q access AW
    q
 
 7. **Now, you will see a screen similar to this.** If you do, it means you successfully installed the AWS Billing MCP server and connected it with the AWS Q CLI. First, it will initialize the MCP server and show a message like this:  
-![alt text](009.png)
-![alt text](010.png)
+   <img width="1323" height="401" alt="009" src="https://github.com/user-attachments/assets/8121e316-4a3e-4eec-b649-2abc6c722f9e" />
+   <img width="1325" height="594" alt="010" src="https://github.com/user-attachments/assets/fbbe1d5d-61f9-44c7-89b9-9f6d46c09e45" />
 
 8. Alternatively, you can set up the entire thing with this single command *after* you set up Amazon Q. It will set up the billing MCP server by itself; you just need to approve whenever it prompts:  
    Bash  
@@ -257,22 +257,22 @@ This section will cover how to set up an MCP server that lets Amazon Q access AW
    * Billing configuration  
    * Key observations  
    * Recommendations
-   ![alt text](013.png)
+   <img width="1330" height="591" alt="013" src="https://github.com/user-attachments/assets/b87dbf8e-5bb8-498b-94bf-65189fa0a168" />
 
 How beautiful is this?\!Bash  
 q "list all the currently running services in all the regions"  
 Then it will write a shell script by itself to pull all the details and show them like this:*(Imagine the output here, just like you described it\!)*This is exactly what I wanted\! :)
-![alt text](014.png)
-![alt text](015.png)
+   <img width="1319" height="557" alt="014" src="https://github.com/user-attachments/assets/f2c2c005-89ea-4058-bca9-991293c85c3c" />
+   <img width="1336" height="248" alt="015" src="https://github.com/user-attachments/assets/72440e77-0e1d-4b59-85d2-21d244899d6a" />
 
 **Example Queries for Our Day-to-Day Work:**
 
 * q "Give me the total AWS spending for this month"  
-![alt text](016.png)
+   <img width="1325" height="591" alt="016" src="https://github.com/user-attachments/assets/dfd8d445-38a2-4fc5-a68a-2ab177fd513e" />
 
 * q "Provide a monthly breakdown of spend for the past year in INR" 
-![alt text](017.png) 
-![alt text](018.png)
+   <img width="1325" height="556" alt="017" src="https://github.com/user-attachments/assets/9c4784dc-3b24-422a-a098-78a5c386f0b6" />
+   <img width="1326" height="458" alt="018" src="https://github.com/user-attachments/assets/9e8f7df1-ff64-4fc7-850a-882a936c9356" />
 
 * q "Highlight any unusual costs incurred over the last 90 days"  
 * q "Am I staying within my monthly budget?"  
