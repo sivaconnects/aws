@@ -37,8 +37,7 @@ Amazon Q, as an AI, doesn’t directly access your AWS account. Instead, the MCP
 6. **Verify the Amazon Q installation:**  
    Bash  
    q \--version
-   <img width="1324" height="323" alt="003" src="https://github.com/user-attachments/assets/6f4c5142-062c-4af9-a9fe-3beb03084286" />
-
+   
 8. Amazon Q Login with your Builder ID:  
    If you already have a Builder ID, great\! If not, create one. It’s different from your AWS user ID and takes about 5 minutes from this URL:  
    https://us-east-1.signin.aws/platform/login?workflowStateHandle=738d74a3-3406-4c13-bb36-a7daa36af48c  
