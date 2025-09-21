@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - NeuralFlow</title>
+    <meta name="description" content="Discover NeuralFlow's comprehensive AI services designed to transform your business operations and accelerate growth.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="url(#logoGradient)"/>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">NeuralFlow</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="btn btn-primary">Get Started</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1 class="page-title">Our Services</h1>
+                <p class="page-description">
+                    Comprehensive AI solutions designed to transform your business operations, 
+                    increase efficiency, and drive unprecedented growth.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+        <div class="container">
+            <div class="services-list">
+                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div class="service-meta">
+                                <h3 class="service-title">AI-Powered Analytics</h3>
+                                <p class="service-category">Data Intelligence</p>
+                            </div>
+                        </div>
+                        <p class="service-description">
+                            Transform raw data into actionable insights with our advanced machine learning algorithms. 
+                            Get real-time analytics, predictive modeling, and automated reporting that drives informed decision-making.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-tag">Real-time Processing</div>
+                            <div class="feature-tag">Predictive Modeling</div>
+                            <div class="feature-tag">Custom Dashboards</div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Starting at $299/month</span>
+                            <button class="btn btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="service-visual">
+                        <div class="service-mockup">
+                            <canvas id="analyticsChart" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <path d="M9 9h6v6H9z"/>
+                                </svg>
+                            </div>
+                            <div class="service-meta">
+                                <h3 class="service-title">Process Automation</h3>
+                                <p class="service-category">Workflow Optimization</p>
+                            </div>
+                        </div>
+                        <p class="service-description">
+                            Automate repetitive tasks and complex workflows with intelligent automation. 
+                            Reduce manual effort by up to 80% while improving accuracy and consistency across operations.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-tag">Workflow Builder</div>
+                            <div class="feature-tag">Smart Triggers</div>
+                            <div class="feature-tag">Integration APIs</div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Starting at $199/month</span>
+                            <button class="btn btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="service-visual">
+                        <div class="service-mockup automation-flow">
+                            <div class="flow-step">Input</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">Process</div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">Output</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                </svg>
+                            </div>
+                            <div class="service-meta">
+                                <h3 class="service-title">Custom AI Solutions</h3>
+                                <p class="service-category">Bespoke Development</p>
+                            </div>
+                        </div>
+                        <p class="service-description">
+                            Tailored AI solutions built specifically for your unique business challenges. 
+                            From natural language processing to computer vision, we develop custom models that fit your exact needs.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-tag">Custom Models</div>
+                            <div class="feature-tag">API Integration</div>
+                            <div class="feature-tag">Ongoing Support</div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Custom Pricing</span>
+                            <button class="btn btn-outline">Get Quote</button>
+                        </div>
+                    </div>
+                    <div class="service-visual">
+                        <div class="service-mockup code-preview">
+                            <div class="code-line">
+                                <span class="code-keyword">def</span>
+                                <span class="code-function">neural_process</span>
+                                <span class="code-bracket">(</span>
+                                <span class="code-param">data</span>
+                                <span class="code-bracket">):</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-indent">    </span>
+                                <span class="code-keyword">return</span>
+                                <span class="code-function">ai_model</span>
+                                <span class="code-bracket">(</span>
+                                <span class="code-param">data</span>
+                                <span class="code-bracket">)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-content">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="service-meta">
+                                <h3 class="service-title">Enterprise Security</h3>
+                                <p class="service-category">Data Protection</p>
+                            </div>
+                        </div>
+                        <p class="service-description">
+                            Bank-level security for your AI operations. Advanced encryption, compliance monitoring, 
+                            and threat detection ensure your data remains protected while maximizing AI capabilities.
+                        </p>
+                        <div class="service-features">
+                            <div class="feature-tag">End-to-End Encryption</div>
+                            <div class="feature-tag">Compliance Monitoring</div>
+                            <div class="feature-tag">Threat Detection</div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Starting at $499/month</span>
+                            <button class="btn btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="service-visual">
+                        <div class="service-mockup security-shield">
+                            <div class="shield-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="security-status">Protected</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-description">
+                    Flexible pricing options designed to scale with your business needs.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <p class="pricing-description">Perfect for small teams getting started with AI</p>
+                        <div class="pricing-price">
+                            <span class="price-amount">$99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Up to 10,000 API calls/month</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Basic analytics dashboard</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Email support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Standard integrations</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Start Free Trial</button>
+                </div>
+                
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <p class="pricing-description">Advanced features for growing businesses</p>
+                        <div class="pricing-price">
+                            <span class="price-amount">$299</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Up to 100,000 API calls/month</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Advanced analytics & reporting</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Priority support</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Custom integrations</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Team collaboration tools</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-full">Start Free Trial</button>
+                </div>
+                
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <p class="pricing-description">Complete solution for large organizations</p>
+                        <div class="pricing-price">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period">pricing</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Unlimited API calls</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Custom AI models</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>Dedicated support team</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>On-premise deployment</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>SLA guarantees</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                <p class="cta-description">
+                    Start your AI journey today with a free consultation. Our experts will help you 
+                    identify the best solutions for your specific needs and goals.
+                </p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large">
+                        Start Free Trial
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                    <a href="contact.html" class="btn btn-outline btn-large">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="url(#footerLogoGradient)"/>
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="logo-text">NeuralFlow</span>
+                    </div>
+                    <p class="footer-description">
+                        Transforming businesses worldwide with cutting-edge AI technology and revolutionary automation solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Features</a></li>
+                            <li><a href="#" class="footer-link">Pricing</a></li>
+                            <li><a href="#" class="footer-link">API</a></li>
+                            <li><a href="#" class="footer-link">Documentation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <ul class="footer-list">
+                            <li><a href="about.html" class="footer-link">About</a></li>
+                            <li><a href="blog.html" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                            <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Help Center</a></li>
+                            <li><a href="#" class="footer-link">Community</a></li>
+                            <li><a href="#" class="footer-link">Tutorials</a></li>
+                            <li><a href="#" class="footer-link">Webinars</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer-link">Terms of Service</a></li>
+                            <li><a href="#" class="footer-link">Cookie Policy</a></li>
+                            <li><a href="#" class="footer-link">GDPR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 NeuralFlow. All rights reserved. Built with revolutionary technology.
+                </p>
+                <div class="footer-badges">
+                    <span class="footer-badge">SOC 2 Compliant</span>
+                    <span class="footer-badge">GDPR Ready</span>
+                    <span class="footer-badge">99.9% Uptime</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>
